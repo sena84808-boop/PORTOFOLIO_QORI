@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qori Sandiaghani | Student Software Developer</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        space: ['Space Grotesk', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        primary: '#111111',
+                        secondary: '#666666',
+                        bg: '#FFFFFF',
+                        accent: '#000000'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Modular CSS Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/tech.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="font-inter antialiased">
+
+    <nav id="navbar" class="fixed top-0 w-full h-[70px] z-50 transition-all duration-400 flex items-center bg-white/70 backdrop-blur-md border-b border-transparent">
+        <div class="container mx-auto px-6 md:px-[100px] max-w-[1200px] flex justify-between items-center w-full">
+            <a href="#home" class="font-space font-bold text-xl tracking-tighter">QS.</a>
+            
+            <div class="hidden md:flex gap-8 font-inter text-sm font-medium">
+                <a href="#home" class="nav-link text-primary">Home</a>
+                <a href="#about" class="nav-link text-secondary hover:text-primary transition-colors">About</a>
+                <a href="#projects" class="nav-link text-secondary hover:text-primary transition-colors">Projects</a>
+                <a href="#contact" class="nav-link text-secondary hover:text-primary transition-colors">Contact</a>
+            </div>
+
+            <button class="md:hidden text-primary text-2xl" id="mobile-menu-btn" aria-label="Menu">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-40 flex flex-col justify-center items-center gap-8 translate-x-full transition-transform duration-400 ease-in-out md:hidden">
+        <button id="close-menu-btn" class="absolute top-6 right-6 text-3xl text-primary" aria-label="Close">
+            <i class="ph ph-x"></i>
+        </button>
+        <a href="#home" class="mobile-link font-space text-2xl text-primary">Home</a>
+        <a href="#about" class="mobile-link font-space text-2xl text-secondary">About</a>
+        <a href="#projects" class="mobile-link font-space text-2xl text-secondary">Projects</a>
+        <a href="#contact" class="mobile-link font-space text-2xl text-secondary">Contact</a>
+    </div>
+
+    <section id="home" class="min-h-screen pt-[70px] bg-radial-soft flex items-center">
+        <div class="container mx-auto px-6 md:px-[100px] max-w-[1200px] py-12 md:py-0">
+            <div class="flex flex-col md:flex-row items-center gap-[40px] md:gap-[60px]">
+                
+                <div class="w-full md:w-5/12 reveal fade-up">
+                    <div class="glass-card p-2 md:p-3 aspect-[3/4] max-w-[400px] mx-auto md:mx-0">
+                        <img src="images/profile.jpg" alt="Qori Sandiaghani" class="w-full h-full object-cover rounded-[20px] md:rounded-[24px] img-grayscale" onerror="this.src='https://placehold.co/400x533/111111/FFFFFF?text=Qori+Sandiaghani'">
+                    </div>
+                </div>
+
+                <div class="w-full md:w-7/12 reveal fade-right flex flex-col items-center text-center md:items-start md:text-left">
+                    <p class="font-mono text-sm text-secondary mb-3">Hi, I'm</p>
+                    <h1 class="font-space text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary leading-tight">
+                        Qori Sandiaghani
+                    </h1>
+                    
+                    <div class="mt-4 border-l-2 border-primary pl-4 hidden md:block">
+                        <h2 class="font-space text-lg md:text-xl font-medium text-primary">Student Software Developer</h2>
+                        <p class="text-secondary text-sm">Building responsive websites and digital experiences.</p>
+                    </div>
+
+                    <div class="mt-3 md:hidden">
+                        <h2 class="font-space text-lg font-medium text-primary">Student Software Developer</h2>
+                        <p class="text-secondary text-sm">SMK Negeri 1 Palangka Raya</p>
+                    </div>
+
+                    <p class="font-inter text-secondary leading-relaxed mt-6 text-base md:text-lg max-w-[600px]">
+                        Saya adalah siswa Rekayasa Perangkat Lunak yang memiliki ketertarikan pada pengembangan website, UI/UX, dan teknologi web modern. Saya senang membangun aplikasi yang responsif, efisien, dan berorientasi pada pengalaman pengguna.
+                    </p>
+
+                    <div class="flex flex-wrap justify-center md:justify-start gap-4 mt-10">
+                        <a href="#projects" class="btn-outline">Explore Projects <i class="ph ph-arrow-right ml-2"></i></a>
+                        <a href="assets/resume.pdf" class="btn-outline border-gray-300 text-secondary hover:border-black" download>Download CV <i class="ph ph-download-simple ml-2"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-[80px] md:py-[120px]">
+        <div class="container mx-auto px-6 md:px-[100px] max-w-[1200px]">
+            <div class="text-center md:text-left mb-12 reveal fade-up">
+                <h2 class="font-space text-3xl md:text-4xl font-bold text-primary">Tech Stack</h2>
+                <p class="text-secondary mt-2">Teknologi dan alat yang saya gunakan.</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 reveal fade-up" style="transition-delay: 0.2s;">
+                
+                <a href="tech.html?skill=webdev" class="glass-card flex flex-col items-center justify-center py-6 gap-3 group">
+                    <div class="bg-primary text-white w-14 h-14 rounded-2xl flex items-center justify-center transition-transform duration-400 group-hover:-translate-y-1 shadow-sm p-3">
+                        <i class="ph ph-code text-3xl"></i>
+                    </div>
+                    <span class="font-mono text-xs font-medium text-secondary group-hover:text-primary transition-colors">Web Dev</span>
+                </a>
+
+                <a href="tech.html?skill=php" class="glass-card flex flex-col items-center justify-center py-6 gap-3 group">
+                    <div class="bg-primary text-white w-14 h-14 rounded-2xl flex items-center justify-center transition-transform duration-400 group-hover:-translate-y-1 shadow-sm p-3">
+                        <i class="devicon-php-plain text-3xl"></i>
+                    </div>
+                    <span class="font-mono text-xs font-medium text-secondary group-hover:text-primary transition-colors">PHP</span>
+                </a>
+                
+                <a href="tech.html?skill=laravel" class="glass-card flex flex-col items-center justify-center py-6 gap-3 group">
+                    <div class="bg-primary text-white w-14 h-14 rounded-2xl flex items-center justify-center transition-transform duration-400 group-hover:-translate-y-1 shadow-sm p-3">
+                        <i class="devicon-laravel-plain text-3xl"></i>
+                    </div>
+                    <span class="font-mono text-xs font-medium text-secondary group-hover:text-primary transition-colors">Laravel</span>
+                </a>
+
+                <a href="tech.html?skill=computer" class="glass-card flex flex-col items-center justify-center py-6 gap-3 group">
+                    <div class="bg-primary text-white w-14 h-14 rounded-2xl flex items-center justify-center transition-transform duration-400 group-hover:-translate-y-1 shadow-sm p-3">
+                        <i class="ph ph-desktop text-3xl"></i>
+                    </div>
+                    <span class="font-mono text-xs font-medium text-secondary group-hover:text-primary transition-colors">Computer</span>
+                </a>
+                
+                <a href="tech.html?skill=network" class="glass-card flex flex-col items-center justify-center py-6 gap-3 group">
+                    <div class="bg-primary text-white w-14 h-14 rounded-2xl flex items-center justify-center transition-transform duration-400 group-hover:-translate-y-1 shadow-sm p-3">
+                        <i class="ph ph-globe-hemisphere-west text-3xl"></i>
+                    </div>
+                    <span class="font-mono text-xs font-medium text-secondary group-hover:text-primary transition-colors">Network</span>
+                </a>
+
+                <a href="tech.html?skill=python" class="glass-card flex flex-col items-center justify-center py-6 gap-3 group">
+                    <div class="bg-primary text-white w-14 h-14 rounded-2xl flex items-center justify-center transition-transform duration-400 group-hover:-translate-y-1 shadow-sm p-3">
+                        <i class="devicon-python-plain text-3xl"></i>
+                    </div>
+                    <span class="font-mono text-xs font-medium text-secondary group-hover:text-primary transition-colors">Python</span>
+                </a>
+
+                <a href="tech.html?skill=mysql" class="glass-card flex flex-col items-center justify-center py-6 gap-3 group">
+                    <div class="bg-primary text-white w-14 h-14 rounded-2xl flex items-center justify-center transition-transform duration-400 group-hover:-translate-y-1 shadow-sm p-3">
+                        <i class="devicon-mysql-plain text-3xl"></i>
+                    </div>
+                    <span class="font-mono text-xs font-medium text-secondary group-hover:text-primary transition-colors">MySQL</span>
+                </a>
+
+                <a href="tech.html?skill=git" class="glass-card flex flex-col items-center justify-center py-6 gap-3 group">
+                    <div class="bg-primary text-white w-14 h-14 rounded-2xl flex items-center justify-center transition-transform duration-400 group-hover:-translate-y-1 shadow-sm p-3">
+                        <i class="devicon-git-plain text-3xl"></i>
+                    </div>
+                    <span class="font-mono text-xs font-medium text-secondary group-hover:text-primary transition-colors">Git</span>
+                </a>
+
+                <a href="tech.html?skill=github" class="glass-card flex flex-col items-center justify-center py-6 gap-3 group">
+                    <div class="bg-primary text-white w-14 h-14 rounded-2xl flex items-center justify-center transition-transform duration-400 group-hover:-translate-y-1 shadow-sm p-3">
+                        <i class="devicon-github-original text-3xl"></i>
+                    </div>
+                    <span class="font-mono text-xs font-medium text-secondary group-hover:text-primary transition-colors">GitHub</span>
+                </a>
+
+                <a href="tech.html?skill=figma" class="glass-card flex flex-col items-center justify-center py-6 gap-3 group">
+                    <div class="bg-primary text-white w-14 h-14 rounded-2xl flex items-center justify-center transition-transform duration-400 group-hover:-translate-y-1 shadow-sm p-3">
+                        <i class="devicon-figma-plain text-3xl"></i>
+                    </div>
+                    <span class="font-mono text-xs font-medium text-secondary group-hover:text-primary transition-colors">Figma</span>
+                </a>
+
+                <a href="tech.html?skill=canva" class="glass-card flex flex-col items-center justify-center py-6 gap-3 group">
+                    <div class="bg-primary text-white w-14 h-14 rounded-2xl flex items-center justify-center transition-transform duration-400 group-hover:-translate-y-1 shadow-sm p-3">
+                        <i class="devicon-canva-original text-3xl"></i>
+                    </div>
+                    <span class="font-mono text-xs font-medium text-secondary group-hover:text-primary transition-colors">Canva</span>
+                </a>
+
+                <a href="tech.html?skill=written" class="glass-card flex flex-col items-center justify-center py-6 gap-3 group">
+                    <div class="bg-primary text-white w-14 h-14 rounded-2xl flex items-center justify-center transition-transform duration-400 group-hover:-translate-y-1 shadow-sm p-3">
+                        <i class="ph ph-pencil-line text-3xl"></i>
+                    </div>
+                    <span class="font-mono text-xs font-medium text-secondary group-hover:text-primary transition-colors">Written</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-[80px] md:py-[120px] bg-gray-50/50">
+        <div class="container mx-auto px-6 md:px-[100px] max-w-[1200px]">
+            <div class="text-center md:text-left mb-12 reveal fade-up">
+                <h2 class="font-space text-3xl md:text-4xl font-bold text-primary">Featured Projects</h2>
+                <p class="text-secondary mt-2">Beberapa karya dan proyek unggulan yang pernah saya buat.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-[40px] md:gap-[60px]">
+                
+                <div class="glass-card p-4 md:p-6 group reveal zoom-in">
+                    <div class="aspect-video w-full overflow-hidden rounded-[20px] mb-6 bg-gray-200">
+                        <img src="images/project1.png" alt="School Management" class="w-full h-full object-cover img-grayscale transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://placehold.co/800x450/111111/FFFFFF?text=Project+1+Preview'">
+                    </div>
+                    <h3 class="font-space text-2xl font-bold text-primary mb-3">School Management Website</h3>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-gray-100 text-xs font-mono rounded-full border border-gray-200">HTML</span>
+                        <span class="px-3 py-1 bg-gray-100 text-xs font-mono rounded-full border border-gray-200">CSS</span>
+                        <span class="px-3 py-1 bg-gray-100 text-xs font-mono rounded-full border border-gray-200">JavaScript</span>
+                        <span class="px-3 py-1 bg-gray-100 text-xs font-mono rounded-full border border-gray-200">Python</span>
+                    </div>
+                    <a href="#" class="btn-outline w-full md:w-auto">View Demo <i class="ph ph-arrow-up-right ml-2"></i></a>
+                </div>
+
+                <div class="glass-card p-4 md:p-6 group reveal zoom-in" style="transition-delay: 0.1s;">
+                    <div class="aspect-video w-full overflow-hidden rounded-[20px] mb-6 bg-gray-200">
+                        <img src="images/project2.png" alt="E-Commerce UI" class="w-full h-full object-cover img-grayscale transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://placehold.co/800x450/111111/FFFFFF?text=Project+2+Preview'">
+                    </div>
+                    <h3 class="font-space text-2xl font-bold text-primary mb-3">Minimalist E-Commerce</h3>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-gray-100 text-xs font-mono rounded-full border border-gray-200">Figma</span>
+                        <span class="px-3 py-1 bg-gray-100 text-xs font-mono rounded-full border border-gray-200">Tailwind</span>
+                        <span class="px-3 py-1 bg-gray-100 text-xs font-mono rounded-full border border-gray-200">JavaScript</span>
+                    </div>
+                    <a href="#" class="btn-outline w-full md:w-auto">View Demo <i class="ph ph-arrow-up-right ml-2"></i></a>
+                </div>
+
+                <div class="glass-card p-4 md:p-6 group reveal zoom-in" style="transition-delay: 0.2s;">
+                    <div class="aspect-video w-full overflow-hidden rounded-[20px] mb-6 bg-gray-200">
+                        <img src="images/project3.png" alt="Library System" class="w-full h-full object-cover img-grayscale transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://placehold.co/800x450/111111/FFFFFF?text=Project+3+Preview'">
+                    </div>
+                    <h3 class="font-space text-2xl font-bold text-primary mb-3">Digital Library System</h3>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-gray-100 text-xs font-mono rounded-full border border-gray-200">PHP</span>
+                        <span class="px-3 py-1 bg-gray-100 text-xs font-mono rounded-full border border-gray-200">MySQL</span>
+                        <span class="px-3 py-1 bg-gray-100 text-xs font-mono rounded-full border border-gray-200">Laravel</span>
+                    </div>
+                    <a href="#" class="btn-outline w-full md:w-auto">View Demo <i class="ph ph-arrow-up-right ml-2"></i></a>
+                </div>
+
+                <div class="glass-card p-4 md:p-6 group reveal zoom-in" style="transition-delay: 0.3s;">
+                    <div class="aspect-video w-full overflow-hidden rounded-[20px] mb-6 bg-gray-200">
+                        <img src="images/project4.png" alt="Portfolio Template" class="w-full h-full object-cover img-grayscale transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://placehold.co/800x450/111111/FFFFFF?text=Project+4+Preview'">
+                    </div>
+                    <h3 class="font-space text-2xl font-bold text-primary mb-3">Monochrome Portfolio</h3>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-gray-100 text-xs font-mono rounded-full border border-gray-200">HTML</span>
+                        <span class="px-3 py-1 bg-gray-100 text-xs font-mono rounded-full border border-gray-200">Tailwind</span>
+                        <span class="px-3 py-1 bg-gray-100 text-xs font-mono rounded-full border border-gray-200">Vanilla JS</span>
+                    </div>
+                    <a href="#" class="btn-outline w-full md:w-auto">View Demo <i class="ph ph-arrow-up-right ml-2"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates" class="py-[80px] md:py-[120px]">
+        <div class="container mx-auto px-6 md:px-[100px] max-w-[1200px]">
+            <div class="text-center md:text-left mb-12 reveal fade-up">
+                <h2 class="font-space text-3xl md:text-4xl font-bold text-primary">Achievements & Certificates</h2>
+                <p class="text-secondary mt-2">Sertifikasi dan pencapaian selama belajar pengembangan perangkat lunak.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 reveal fade-up">
+                
+                <div class="glass-card p-2 cursor-pointer group" onclick="openModal('assets/certificates/cert1.png')">
+                    <img src="https://placehold.co/600x450/111111/FFFFFF?text=Certificate+1" alt="Certificate 1" class="w-full aspect-[4/3] object-cover rounded-xl img-grayscale">
+                    <div class="p-4 text-center">
+                        <h4 class="font-space font-bold text-primary group-hover:underline">Dasar Pemrograman Web</h4>
+                        <p class="text-xs text-secondary font-mono mt-1">Dicoding Indonesia</p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-2 cursor-pointer group" onclick="openModal('assets/certificates/cert2.png')">
+                    <img src="https://placehold.co/600x450/111111/FFFFFF?text=Certificate+2" alt="Certificate 2" class="w-full aspect-[4/3] object-cover rounded-xl img-grayscale">
+                    <div class="p-4 text-center">
+                        <h4 class="font-space font-bold text-primary group-hover:underline">Junior Web Developer</h4>
+                        <p class="text-xs text-secondary font-mono mt-1">VSGA Kominfo</p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-2 cursor-pointer group" onclick="openModal('assets/certificates/cert3.png')">
+                    <img src="https://placehold.co/600x450/111111/FFFFFF?text=Certificate+3" alt="Certificate 3" class="w-full aspect-[4/3] object-cover rounded-xl img-grayscale">
+                    <div class="p-4 text-center">
+                        <h4 class="font-space font-bold text-primary group-hover:underline">Python for Data Science</h4>
+                        <p class="text-xs text-secondary font-mono mt-1">Coursera</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-[80px] md:py-[120px] bg-gray-50/50">
+        <div class="container mx-auto px-6 md:px-[100px] max-w-[1200px]">
+            <div class="text-center mb-12 reveal fade-up">
+                <h2 class="font-space text-4xl md:text-5xl font-bold text-primary">Let's Work Together</h2>
+                <p class="text-secondary mt-4 max-w-xl mx-auto">Tertarik untuk berkolaborasi, mendiskusikan proyek, atau sekadar menyapa? Jangan ragu untuk menghubungi saya melalui platform di bawah ini.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-[800px] mx-auto reveal fade-up" style="transition-delay: 0.2s;">
+                <a href="sena84808@gmail.com" class="glass-card flex flex-col items-center justify-center py-8 gap-3 group hover:bg-black hover:!border-black transition-all duration-400">
+                    <i class="ph ph-envelope-simple text-4xl text-primary group-hover:text-white transition-colors"></i>
+                    <span class="font-mono text-sm font-medium text-secondary group-hover:text-gray-300 transition-colors">Email</span>
+                </a>
+                <a href="https://wa.me/6285388362536" target="_blank" class="glass-card flex flex-col items-center justify-center py-8 gap-3 group hover:bg-black hover:!border-black transition-all duration-400">
+                    <i class="ph ph-whatsapp-logo text-4xl text-primary group-hover:text-white transition-colors"></i>
+                    <span class="font-mono text-sm font-medium text-secondary group-hover:text-gray-300 transition-colors">WhatsApp</span>
+                </a>
+                <a href="https://github.com/sena84808-boop" target="_blank" class="glass-card flex flex-col items-center justify-center py-8 gap-3 group hover:bg-black hover:!border-black transition-all duration-400">
+                    <i class="ph ph-github-logo text-4xl text-primary group-hover:text-white transition-colors"></i>
+                    <span class="font-mono text-sm font-medium text-secondary group-hover:text-gray-300 transition-colors">GitHub</span>
+                </a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank" class="glass-card flex flex-col items-center justify-center py-8 gap-3 group hover:bg-black hover:!border-black transition-all duration-400">
+                    <i class="ph ph-linkedin-logo text-4xl text-primary group-hover:text-white transition-colors"></i>
+                    <span class="font-mono text-sm font-medium text-secondary group-hover:text-gray-300 transition-colors">LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 border-t border-gray-100 text-center">
+        <div class="container mx-auto px-6">
+            <p class="font-space font-bold text-lg">Qori Sandiaghani</p>
+            <p class="text-sm text-secondary mt-1">Student Software Developer</p>
+            <p class="text-xs text-gray-400 mt-6 font-mono">© 2026. Designed & Built with Minimalist Approach.</p>
+        </div>
+    </footer>
+
+    <div id="image-modal" class="fixed inset-0 z-[60] bg-black/90 backdrop-blur-sm hidden flex-col items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+        <button onclick="closeModal()" class="absolute top-6 right-6 text-white text-4xl hover:text-gray-300 transition-colors">
+            <i class="ph ph-x"></i>
+        </button>
+        <img id="modal-img" src="" alt="Sertifikat Full" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl scale-95 transition-transform duration-300">
+    </div>
+
+    <!-- Modular JS Scripts -->
+    <script src="js/navbar.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/main.js"></script>
+    <script>src="js/typing.js"</script>
+    
+</body>
+</html>

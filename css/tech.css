@@ -1,0 +1,13 @@
+/* STREAMING_CHUNK:Styling Tech Stack section... */
+.fade-in-up {
+    animation: fadeInUp 0.6s cubic-bezier(0.5, 0, 0, 1) forwards;
+    opacity: 0;
+    transform: translateY(20px);
+    }
+    
+    @keyframes fadeInUp {
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+    }

@@ -1,0 +1,18 @@
+/* STREAMING_CHUNK:Styling Navbar... */
+.nav-link {
+    position: relative;
+    display: inline-block;
+    }
+    .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1.5px;
+    bottom: -4px;
+    left: 0;
+    background-color: #000000;
+    transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+    width: 100%;
+    }

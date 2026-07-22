@@ -1,0 +1,7 @@
+/* STREAMING_CHUNK:Configuring Responsive Adjustments... */
+@media (max-width: 768px) {
+    .glass-card {
+    border-radius: 24px;
+    padding: 8px;
+    }
+    }

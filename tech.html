@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Details | Qori Sandiaghani</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        space: ['Space Grotesk', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        primary: '#111111',
+                        secondary: '#666666',
+                        bg: '#FFFFFF',
+                        accent: '#000000'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tech.css">
+</head>
+<body class="font-inter antialiased flex flex-col min-h-screen bg-radial-soft">
+
+    <nav class="w-full h-[70px] z-50 flex items-center bg-transparent">
+        <div class="container mx-auto px-6 md:px-[100px] max-w-[1200px] flex justify-between items-center w-full">
+            <a href="index.html" class="font-space font-bold text-xl tracking-tighter hover:opacity-70 transition-opacity">QS.</a>
+            <a href="index.html" class="font-mono text-sm font-medium text-secondary hover:text-primary transition-colors flex items-center gap-2">
+                <i class="ph ph-arrow-left"></i> Back to Portfolio
+            </a>
+        </div>
+    </nav>
+
+    <main class="flex-grow flex items-center justify-center py-12 px-6">
+        <div class="container mx-auto max-w-[700px] w-full">
+            
+            <div id="content-card" class="glass-card flex flex-col items-center text-center fade-in-up hidden">
+                <div class="bg-primary text-white w-24 h-24 rounded-3xl flex items-center justify-center shadow-lg mb-8" id="skill-icon-bg">
+                    <i id="skill-icon" class="text-5xl"></i>
+                </div>
+
+                <h1 id="skill-title" class="font-space text-3xl md:text-4xl font-bold text-primary mb-4">Skill Title</h1>
+                
+                <div id="skill-tags" class="flex flex-wrap justify-center gap-2 mb-6"></div>
+
+                <p id="skill-desc" class="font-inter text-secondary leading-relaxed text-base md:text-lg mb-10 max-w-[500px]">
+                    Deskripsi skill akan muncul di sini.
+                </p>
+
+                <a href="index.html#about" class="btn-outline">
+                    Explore Other Skills
+                </a>
+            </div>
+
+            <div id="error-card" class="text-center fade-in-up hidden py-20">
+                <i class="ph ph-warning-circle text-6xl text-secondary mb-4"></i>
+                <h2 class="font-space text-2xl font-bold text-primary mb-2">Skill Not Found</h2>
+                <p class="text-secondary mb-6">Maaf, kami tidak dapat menemukan detail untuk teknologi tersebut.</p>
+                <a href="index.html#about" class="btn-outline">Return to Portfolio</a>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        const skillData = {
+            webdev: {
+                title: "Web Development",
+                iconClass: "ph ph-code",
+                tags: ["HTML5", "CSS3", "JavaScript (ES6+)"],
+                desc: "Membangun fondasi antarmuka web yang interaktif dan responsif. Berfokus pada struktur HTML yang semantik, styling yang estetis menggunakan CSS (termasuk Tailwind), serta logika interaktif dengan JavaScript."
+            },
+            php: {
+                title: "PHP Development",
+                iconClass: "devicon-php-plain",
+                tags: ["Backend", "Server-Side", "API"],
+                desc: "Pengembangan backend server-side yang dinamis. Menggunakan PHP untuk memproses logika bisnis di sisi server, mengelola sesi pengguna, serta mengamankan alur data."
+            },
+            laravel: {
+                title: "Laravel Framework",
+                iconClass: "devicon-laravel-plain",
+                tags: ["MVC", "PHP Framework", "Eloquent ORM"],
+                desc: "Framework PHP modern untuk pengembangan web yang elegan dan cepat menggunakan arsitektur MVC, sistem routing yang tangguh, serta pengelolaan database yang efisien."
+            },
+            computer: {
+                title: "Computer Systems",
+                iconClass: "ph ph-desktop",
+                tags: ["Hardware", "Networking", "OS"],
+                desc: "Pemahaman mendalam tentang arsitektur perangkat keras, sistem operasi, serta jaringan dasar untuk keperluan troubleshooting dan pemeliharaan sistem komputer."
+            },
+            network: {
+                title: "Computer Networking",
+                iconClass: "ph ph-globe-hemisphere-west",
+                tags: ["TCP/IP", "Routing", "LAN/WAN"],
+                desc: "Konfigurasi dan manajemen jaringan komputer dasar, pemahaman topologi jaringan, pengaturan router/switch, serta memastikan konektivitas data berjalan lancar."
+            },
+            python: {
+                title: "Python Programming",
+                iconClass: "devicon-python-plain",
+                tags: ["Scripting", "Data", "Logic"],
+                desc: "Bahasa pemrograman serbaguna untuk otomasi tugas, pemecahan masalah algoritma, serta eksplorasi pemrograman tingkat dasar."
+            },
+            mysql: {
+                title: "MySQL Database",
+                iconClass: "devicon-mysql-plain",
+                tags: ["Relational Database", "SQL", "Data Management"],
+                desc: "Sistem manajemen basis data relasional. Berpengalaman merancang skema tabel, menulis query SQL, dan memastikan integritas data aplikasi."
+            },
+            git: {
+                title: "Git Version Control",
+                iconClass: "devicon-git-plain",
+                tags: ["Version Control", "CLI", "Tracking"],
+                desc: "Alat esensial untuk melacak histori kode, branching, dan mengelola perubahan source code secara aman selama pengembangan proyek."
+            },
+            github: {
+                title: "GitHub Platform",
+                iconClass: "devicon-github-original",
+                tags: ["Hosting", "Collaboration", "Repository"],
+                desc: "Platform cloud untuk menyimpan repositori Git, mempublikasikan portofolio online, serta memfasilitasi kolaborasi kode."
+            },
+            figma: {
+                title: "Figma UI/UX Design",
+                iconClass: "devicon-figma-plain",
+                tags: ["Prototyping", "Wireframing", "UI Design"],
+                desc: "Platform desain untuk membuat wireframe dan prototype interaktif guna memvisualisasikan tata letak antarmuka sebelum diimplementasikan ke kode."
+            },
+            canva: {
+                title: "Canva Design",
+                iconClass: "devicon-canva-original",
+                tags: ["Graphic Design", "Presentation", "Media"],
+                desc: "Alat desain grafis pendukung untuk pembuatan materi visual, presentasi profesional, dan aset media kreatif lainnya."
+            },
+            written: {
+                title: "Written & Documentation",
+                iconClass: "ph ph-pencil-line",
+                tags: ["Technical Writing", "Documentation", "Communication"],
+                desc: "Kemampuan menyusun dokumentasi teknis proyek, laporan kegiatan, serta penulisan narasi profesional secara jelas dan sistematis."
+            }
+        };
+
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const skillId = getQueryParam('skill');
+            const data = skillData[skillId];
+
+            const contentCard = document.getElementById('content-card');
+            const errorCard = document.getElementById('error-card');
+
+            if (data) {
+                document.getElementById('skill-icon').className = `${data.iconClass} text-5xl`;
+                document.getElementById('skill-title').textContent = data.title;
+                document.getElementById('skill-desc').textContent = data.desc;
+
+                const tagsContainer = document.getElementById('skill-tags');
+                data.tags.forEach(tag => {
+                    const span = document.createElement('span');
+                    span.className = "px-4 py-1.5 bg-gray-100/80 text-xs font-mono rounded-full text-secondary border border-gray-200";
+                    span.textContent = tag;
+                    tagsContainer.appendChild(span);
+                });
+
+                contentCard.classList.remove('hidden');
+            } else {
+                errorCard.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
