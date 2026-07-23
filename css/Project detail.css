@@ -1,0 +1,20 @@
+/* STREAMING_CHUNK:Styling Project Detail page... */
+.project-detail {
+    scroll-margin-top: 90px;
+    border-radius: 32px;
+    transition: background-color 0.8s ease;
+}
+
+.project-detail + .project-detail {
+    border-top: 1px solid rgba(17, 17, 17, 0.06);
+}
+
+.project-detail.project-highlight {
+    background-color: rgba(17, 17, 17, 0.035);
+}
+
+.quicknav-link.is-active {
+    background-color: #111111;
+    color: #FFFFFF;
+    border-color: #111111;
+}

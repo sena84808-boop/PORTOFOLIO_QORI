@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Proyek | Qori Sandiaghani</title>
+    <meta name="description" content="Penjelasan lengkap proyek-proyek unggulan Qori Sandiaghani.">
+olio
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        space: ['Space Grotesk', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        primary: '#111111',
+                        secondary: '#666666',
+                        bg: '#FFFFFF',
+                        accent: '#000000'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Modular CSS Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/project-detail.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="font-inter antialiased">
+
+    <nav id="navbar" class="fixed top-0 w-full h-[70px] z-50 transition-all duration-400 flex items-center bg-white/70 backdrop-blur-md border-b border-transparent">
+        <div class="container mx-auto px-6 md:px-[100px] max-w-[1200px] flex justify-between items-center w-full">
+            <a href="index.html" class="font-space font-bold text-xl tracking-tighter">QS.</a>
+
+            <div class="hidden md:flex gap-8 font-inter text-sm font-medium">
+                <a href="index.html#home" class="nav-link text-secondary hover:text-primary transition-colors">Home</a>
+                <a href="index.html#about" class="nav-link text-secondary hover:text-primary transition-colors">About</a>
+                <a href="index.html#projects" class="nav-link text-primary">Projects</a>
+                <a href="index.html#contact" class="nav-link text-secondary hover:text-primary transition-colors">Contact</a>
+            </div>
+
+            <button class="md:hidden text-primary text-2xl" id="mobile-menu-btn" aria-label="Menu">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-40 flex flex-col justify-center items-center gap-8 translate-x-full transition-transform duration-400 ease-in-out md:hidden">
+        <button id="close-menu-btn" class="absolute top-6 right-6 text-3xl text-primary" aria-label="Close">
+            <i class="ph ph-x"></i>
+        </button>
+        <a href="index.html#home" class="mobile-link font-space text-2xl text-secondary">Home</a>
+        <a href="index.html#about" class="mobile-link font-space text-2xl text-secondary">About</a>
+        <a href="index.html#projects" class="mobile-link font-space text-2xl text-primary">Projects</a>
+        <a href="index.html#contact" class="mobile-link font-space text-2xl text-secondary">Contact</a>
+    </div>
+
+    <header class="pt-[150px] pb-[50px] md:pt-[170px] md:pb-[70px] bg-radial-soft">
+        <div class="container mx-auto px-6 md:px-[100px] max-w-[1200px]">
+            <a href="index.html#projects" class="inline-flex items-center gap-2 font-mono text-xs text-secondary hover:text-primary transition-colors mb-6 reveal fade-up">
+                <i class="ph ph-arrow-left"></i> Kembali ke Beranda
+            </a>
+
+            <div class="reveal fade-up" style="transition-delay: 0.1s;">
+                <h1 class="font-space text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary">Detail Proyek</h1>
+                <p class="text-secondary leading-relaxed mt-4 max-w-2xl">
+                    Penjelasan lebih lengkap dari proyek-proyek unggulan yang saya tampilkan di beranda — mulai dari fitur utama, teknologi yang digunakan, hingga tantangan yang saya hadapi selama proses pengembangan.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap gap-3 mt-10 reveal fade-up" style="transition-delay: 0.2s;">
+                <a href="#project-1" class="quicknav-link px-4 py-2 rounded-full border border-gray-200 font-mono text-xs text-secondary hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">01 · School Management</a>
+                <a href="#project-2" class="quicknav-link px-4 py-2 rounded-full border border-gray-200 font-mono text-xs text-secondary hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">02 · E-Commerce</a>
+                <a href="#project-3" class="quicknav-link px-4 py-2 rounded-full border border-gray-200 font-mono text-xs text-secondary hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">03 · Digital Library</a>
+                <a href="#project-4" class="quicknav-link px-4 py-2 rounded-full border border-gray-200 font-mono text-xs text-secondary hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">04 · Portfolio Template</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Project 1 : School Management Website -->
+        <section id="project-1" class="project-detail py-[50px] md:py-[80px]">
+            <div class="container mx-auto px-6 md:px-[100px] max-w-[1200px]">
+                <div class="flex flex-col lg:flex-row items-center gap-[40px] md:gap-[60px]">
+                    <div class="w-full lg:w-1/2 reveal fade-right">
+                        <div class="glass-card p-3 md:p-4">
+                            <div class="aspect-video w-full overflow-hidden rounded-[20px] bg-gray-200">
+                                <img src="images/project1.PNG" alt="School Management" class="w-full h-full object-cover img-grayscale" onerror="this.src='https://placehold.co/800x450/111111/FFFFFF?text=Project+1+Preview'">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 reveal fade-up">
+                        <span class="font-mono text-xs text-secondary">Proyek 01 / 04</span>
+                        <h2 class="font-space text-3xl md:text-4xl font-bold text-primary mt-2 mb-4">School Management Website</h2>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-gray-100 text-xs font-mono rounded-full border border-gray-200">HTML</span>
+                            <span class="px-3 py-1 bg-gray-100 text-xs font-mono rounded-full border border-gray-200">CSS</span>
+                            <span class="px-3 py-1 bg-gray-100 text-xs font-mono rounded-full border border-gray-200">JavaScript</span>
+                            <span class="px-3 py-1 bg-gray-100 text-xs font-mono rounded-full border border-gray-200">Python</span>
+                        </div>
+                        <p class="text-secondary leading-relaxed mb-6">
+                            Website manajemen sekolah yang dirancang untuk membantu pihak admin mengelola data siswa, guru, dan kegiatan akademik secara terpusat — menggantikan pencatatan manual dengan sistem digital yang lebih rapi dan efisien.
+                        </p>
+                        <h3 class="font-space font-semibold text-primary mb-3 text-sm uppercase tracking-wide">Fitur Utama</h3>
+                        <ul class="space-y-2 text-secondary mb-8">
+                            <li class="flex items-start gap-2"><i class="ph ph-check-circle text-primary mt-0.5"></i> Dashboard admin untuk mengelola data siswa dan guru</li>
+                            <li class="flex items-start gap-2"><i class="ph ph-check-circle text-primary mt-0.5"></i> Input dan rekap nilai secara digital</li>
+                            <li class="flex items-start gap-2"><i class="ph ph-check-circle text-primary mt-0.5"></i> Manajemen jadwal pelajaran</li>
+                            <li class="flex items-start gap-2"><i class="ph ph-check-circle text-primary mt-0.5"></i> Pencarian dan filter data siswa yang cepat</li>
+                            <li class="flex items-start gap-2"><i class="ph ph-check-circle text-primary mt-0.5"></i> Tampilan responsif di berbagai ukuran perangkat</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#" class="btn-outline">View Demo <i class="ph ph-arrow-up-right ml-2"></i></a>
+                            <a href="index.html#contact" class="btn-outline border-gray-300 text-secondary hover:border-black">Diskusikan Proyek Ini</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project 2 : Minimalist E-Commerce -->
+        <section id="project-2" class="project-detail py-[50px] md:py-[80px]">
+            <div class="container mx-auto px-6 md:px-[100px] max-w-[1200px]">
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-[40px] md:gap-[60px]">
+                    <div class="w-full lg:w-1/2 reveal fade-right">
+                        <div class="glass-card p-3 md:p-4">
+                            <div class="aspect-video w-full overflow-hidden rounded-[20px] bg-gray-200">
+                                <img src="images/project2.PNG" alt="E-Commerce UI" class="w-full h-full object-cover img-grayscale" onerror="this.src='https://placehold.co/800x450/111111/FFFFFF?text=Project+2+Preview'">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 reveal fade-up">
+                        <span class="font-mono text-xs text-secondary">Proyek 02 / 04</span>
+                        <h2 class="font-space text-3xl md:text-4xl font-bold text-primary mt-2 mb-4">Minimalist E-Commerce</h2>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-gray-100 text-xs font-mono rounded-full border border-gray-200">Figma</span>
+                            <span class="px-3 py-1 bg-gray-100 text-xs font-mono rounded-full border border-gray-200">Tailwind</span>
+                            <span class="px-3 py-1 bg-gray-100 text-xs font-mono rounded-full border border-gray-200">JavaScript</span>
+                        </div>
+                        <p class="text-secondary leading-relaxed mb-6">
+                            Desain antarmuka toko online dengan pendekatan minimalis, dimulai dari proses wireframing dan prototyping di Figma sebelum diimplementasikan menjadi kode nyata menggunakan Tailwind CSS dan JavaScript.
+                        </p>
+                        <h3 class="font-space font-semibold text-primary mb-3 text-sm uppercase tracking-wide">Fitur Utama</h3>
+                        <ul class="space-y-2 text-secondary mb-8">
+                            <li class="flex items-start gap-2"><i class="ph ph-check-circle text-primary mt-0.5"></i> Prototipe interaktif dirancang penuh di Figma sebelum masuk tahap coding</li>
+                            <li class="flex items-start gap-2"><i class="ph ph-check-circle text-primary mt-0.5"></i> Halaman katalog produk dengan grid yang bersih dan konsisten</li>
+                            <li class="flex items-start gap-2"><i class="ph ph-check-circle text-primary mt-0.5"></i> Halaman detail produk lengkap dengan galeri gambar</li>
+                            <li class="flex items-start gap-2"><i class="ph ph-check-circle text-primary mt-0.5"></i> Fungsi keranjang belanja sederhana (tambah & hapus item) dengan JavaScript</li>
+                            <li class="flex items-start gap-2"><i class="ph ph-check-circle text-primary mt-0.5"></i> Desain mobile-first yang tetap nyaman di layar kecil</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#" class="btn-outline">View Demo <i class="ph ph-arrow-up-right ml-2"></i></a>
+                            <a href="index.html#contact" class="btn-outline border-gray-300 text-secondary hover:border-black">Diskusikan Proyek Ini</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project 3 : Digital Library System -->
+        <section id="project-3" class="project-detail py-[50px] md:py-[80px]">
+            <div class="container mx-auto px-6 md:px-[100px] max-w-[1200px]">
+                <div class="flex flex-col lg:flex-row items-center gap-[40px] md:gap-[60px]">
+                    <div class="w-full lg:w-1/2 reveal fade-right">
+                        <div class="glass-card p-3 md:p-4">
+                            <div class="aspect-video w-full overflow-hidden rounded-[20px] bg-gray-200">
+                                <img src="images/project3.PNG" alt="Library System" class="w-full h-full object-cover img-grayscale" onerror="this.src='https://placehold.co/800x450/111111/FFFFFF?text=Project+3+Preview'">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 reveal fade-up">
+                        <span class="font-mono text-xs text-secondary">Proyek 03 / 04</span>
+                        <h2 class="font-space text-3xl md:text-4xl font-bold text-primary mt-2 mb-4">Digital Library System</h2>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-gray-100 text-xs font-mono rounded-full border border-gray-200">PHP</span>
+                            <span class="px-3 py-1 bg-gray-100 text-xs font-mono rounded-full border border-gray-200">MySQL</span>
+                            <span class="px-3 py-1 bg-gray-100 text-xs font-mono rounded-full border border-gray-200">Laravel</span>
+                        </div>
+                        <p class="text-secondary leading-relaxed mb-6">
+                            Sistem perpustakaan digital berbasis Laravel yang membantu sekolah mengelola koleksi buku, transaksi peminjaman, dan data anggota secara digital — menggantikan pencatatan manual di buku besar.
+                        </p>
+                        <h3 class="font-space font-semibold text-primary mb-3 text-sm uppercase tracking-wide">Fitur Utama</h3>
+                        <ul class="space-y-2 text-secondary mb-8">
+                            <li class="flex items-start gap-2"><i class="ph ph-check-circle text-primary mt-0.5"></i> CRUD data buku lengkap dengan kategori dan status ketersediaan</li>
+                            <li class="flex items-start gap-2"><i class="ph ph-check-circle text-primary mt-0.5"></i> Sistem peminjaman dan pengembalian buku dengan status real-time</li>
+                            <li class="flex items-start gap-2"><i class="ph ph-check-circle text-primary mt-0.5"></i> Manajemen data anggota perpustakaan</li>
+                            <li class="flex items-start gap-2"><i class="ph ph-check-circle text-primary mt-0.5"></i> Autentikasi login terpisah untuk admin dan anggota</li>
+                            <li class="flex items-start gap-2"><i class="ph ph-check-circle text-primary mt-0.5"></i> Struktur database relasional dengan MySQL untuk menjaga integritas data</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#" class="btn-outline">View Demo <i class="ph ph-arrow-up-right ml-2"></i></a>
+                            <a href="index.html#contact" class="btn-outline border-gray-300 text-secondary hover:border-black">Diskusikan Proyek Ini</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project 4 : Monochrome Portfolio -->
+        <section id="project-4" class="project-detail py-[50px] md:py-[80px]">
+            <div class="container mx-auto px-6 md:px-[100px] max-w-[1200px]">
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-[40px] md:gap-[60px]">
+                    <div class="w-full lg:w-1/2 reveal fade-right">
+                        <div class="glass-card p-3 md:p-4">
+                            <div class="aspect-video w-full overflow-hidden rounded-[20px] bg-gray-200">
+                                <img src="images/project4.PNG" alt="Portfolio Template" class="w-full h-full object-cover img-grayscale" onerror="this.src='https://placehold.co/800x450/111111/FFFFFF?text=Project+4+Preview'">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 reveal fade-up">
+                        <span class="font-mono text-xs text-secondary">Proyek 04 / 04</span>
+                        <h2 class="font-space text-3xl md:text-4xl font-bold text-primary mt-2 mb-4">Monochrome Portfolio</h2>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-gray-100 text-xs font-mono rounded-full border border-gray-200">HTML</span>
+                            <span class="px-3 py-1 bg-gray-100 text-xs font-mono rounded-full border border-gray-200">Tailwind</span>
+                            <span class="px-3 py-1 bg-gray-100 text-xs font-mono rounded-full border border-gray-200">Vanilla JS</span>
+                        </div>
+                        <p class="text-secondary leading-relaxed mb-6">
+                            Template portofolio pribadi bergaya monokrom, dibangun dari nol menggunakan HTML, Tailwind CSS, dan vanilla JavaScript. Berfokus pada tipografi yang bersih, whitespace yang lega, dan micro-interaction halus tanpa bergantung pada framework JavaScript tambahan.
+                        </p>
+                        <h3 class="font-space font-semibold text-primary mb-3 text-sm uppercase tracking-wide">Fitur Utama</h3>
+                        <ul class="space-y-2 text-secondary mb-8">
+                            <li class="flex items-start gap-2"><i class="ph ph-check-circle text-primary mt-0.5"></i> Navigasi responsif lengkap dengan menu mobile</li>
+                            <li class="flex items-start gap-2"><i class="ph ph-check-circle text-primary mt-0.5"></i> Animasi scroll-reveal berbasis Intersection Observer API</li>
+                            <li class="flex items-start gap-2"><i class="ph ph-check-circle text-primary mt-0.5"></i> Efek gambar grayscale-ke-warna saat kartu di-hover</li>
+                            <li class="flex items-start gap-2"><i class="ph ph-check-circle text-primary mt-0.5"></i> Struktur kode modular — CSS dan JavaScript dipisah per komponen</li>
+                            <li class="flex items-start gap-2"><i class="ph ph-check-circle text-primary mt-0.5"></i> Dibangun murni dengan HTML, CSS, dan JavaScript tanpa framework front-end</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#" class="btn-outline">View Demo <i class="ph ph-arrow-up-right ml-2"></i></a>
+                            <a href="index.html#contact" class="btn-outline border-gray-300 text-secondary hover:border-black">Diskusikan Proyek Ini</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="text-center pb-[70px] md:pb-[110px] px-6 reveal fade-up">
+        <p class="text-secondary mb-6 max-w-md mx-auto">Tertarik berdiskusi lebih lanjut tentang proyek-proyek di atas, atau ingin berkolaborasi?</p>
+        <a href="index.html#contact" class="btn-outline">Hubungi Saya <i class="ph ph-arrow-up-right ml-2"></i></a>
+    </div>
+
+    <footer class="py-8 border-t border-gray-100 text-center">
+        <div class="container mx-auto px-6">
+            <p class="font-space font-bold text-lg">Qori Sandiaghani</p>
+            <p class="text-sm text-secondary mt-1">Student Software Developer</p>
+            <p class="text-xs text-gray-400 mt-6 font-mono">© 2026. Designed & Built with Minimalist Approach.</p>
+        </div>
+    </footer>
+
+    <!-- Modular JS Scripts -->
+    <script src="js/navbar.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/project.js"></script>
+
+</body>
+</html>
